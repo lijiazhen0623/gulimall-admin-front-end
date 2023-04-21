@@ -75,9 +75,7 @@
 
     <el-dialog title="关联分类" :visible.sync="cateRelationDialogVisible" width="30%">
       <el-popover placement="right-end" v-model="popCatelogSelectVisible">
-
         <category-cascader :catelogPath.sync="catelogPath"></category-cascader>
-
         <div style="text-align: right; margin: 0">
           <el-button size="mini" type="text" @click="popCatelogSelectVisible = false">取消</el-button>
           <el-button type="primary" size="mini" @click="addCatelogSelect">确定</el-button>

@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import SingleUpload from "@/utils/upload/singleUpload";
+import SingleUpload from "@/components/upload/singleUpload";
 export default {
   components: { SingleUpload },
   data() {
@@ -78,7 +78,7 @@ export default {
         firstLetter: [
           {
             validator: (rule, value, callback) => {
-              if (value === "") {
+              if (value == "") {
                 callback(new Error("首字母必须填写"));
               } else if (!/^[a-zA-Z]$/.test(value)) {
                 callback(new Error("首字母必须a-z或者A-Z之间"));
@@ -92,7 +92,7 @@ export default {
         sort: [
           {
             validator: (rule, value, callback) => {
-              if (value === "") {
+              if (value == "") {
                 callback(new Error("排序字段必须填写"));
               } else if (!Number.isInteger(value) || value<0) {
                 callback(new Error("排序必须是一个大于等于0的整数"));
